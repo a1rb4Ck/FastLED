@@ -1,6 +1,6 @@
 #include <FastLED.h>
 #if defined(FASTLED_VERSION) && (FASTLED_VERSION < 3001000)
-#warning "Requires FastLED 3.1 or later; check github for latest code."
+    #warning "Requires FastLED 3.1 or later; check github for latest code."
 #endif
 
 //#define DEBUG
@@ -15,6 +15,7 @@ CRGB leds[NUM_LEDS];
 #define UPDATES_PER_SECOND 60  // 90 is fast, 120 is too fast
 // 156 FPS with UPDATES_PER_SECOND 90 or 120
 
+// All great ideas came from Mark: https://gist.github.com/kriegsman
 // Based on ColorPalette and :
 // FastLED "100-lines-of-code" demo reel, showing just a few 
 // of the kinds of animation patterns you can quickly and easily 
@@ -24,6 +25,7 @@ CRGB leds[NUM_LEDS];
 // animations patterns and have them automatically rotate.
 //
 // -Mark Kriegsman, December 2014
+// 
 // based also on:
 // ColorWavesWithPalettes
 // Animated shifting color waves, with several cross-fading color palettes.
